@@ -7,10 +7,20 @@
     <title>Dev Board</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.9/daisyui.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        .container {
+            background-color: #8695f4;
+            padding: 5px;
+            margin-top: 10px;
+            color: white;
+            border-radius: 20px;
+            text-align: center;
+        }
+    </style>
 </head>
 
 
-<body class="bg-yellow-300">
+<body class="bg-blue-100">
     <header class="pt-3">
         <nav class="w-11/12 mx-auto">
             <div class="navbar bg-base-100 shadow-sm rounded-xl px-3">
@@ -19,13 +29,10 @@
                     <h2 class="text-3xl">Dev <span class="font-bold">Board</span></h2>
                 </div>
                 <div class="flex gap-2">
-                    <button class="btn rounded-3xl"><img src="assets/checkbox.png" alt=""> 23</button>
-                    <div class="dropdown dropdown-end">
-                        <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
-                            <div class="w-10 rounded-full">
-                                <img id="bg-btn" alt="Tailwind CSS Navbar component" src="assets/theme-btn.png" />
-                            </div>
-                        </div>
+                    <button class="btn rounded-3xl"><img src="assets/checkbox.png" alt="">
+                        <span id="total-task" class="text-3xl font-bold">23</span></button>
+                    <div>
+                        <img id="bg-theme-change" alt="Tailwind CSS Navbar component" src="assets/theme-btn.png" />
 
                     </div>
                 </div>
@@ -42,10 +49,11 @@
                             <img class="bg-white p-2 rounded-2xl" src="assets/checkbox.png" alt="">
                             <div>
                                 <p>Task Assigned </p>
-                                <h3 class="text-2xl font-bold">06</h3>
+                                <h3 id="task-number" class="text-2xl font-bold">06</h3>
                             </div>
                         </div>
-                        <div class="flex gap-x-2 justify-center items-center bg-blue-400 rounded-lg col-span-2">
+                        <div id="discover-box"
+                            class="flex gap-x-2 justify-center items-center bg-blue-400 rounded-lg col-span-2">
                             <img class=" rounded-2xl" src="assets/board.png" alt="">
                             <div>
 
@@ -57,7 +65,7 @@
                             <div>
 
                                 <h3 class=" ">Wed , <br>
-                                    <span class="font-bold">Jul 28 2025</span>
+                                    <span id="current-date" class="font-bold"></span>
                                 </h3>
                             </div>
                         </div>
@@ -67,7 +75,7 @@
                 <section class="p-3 rounded-lg grid grid-cols-3 gap-5">
                     <div class="bg-blue-100 p-3 space-y-3 rounded-lg">
                         <button class="btn bg-white rounded-lg">ShopEase</button>
-                        <h2 class="text-xl font-bold">Fix Mobile Button Issue </h2>
+                        <h2 id="task-title-1" class="text-xl font-bold">Fix Mobile Button Issue </h2>
                         <p class="bg-white p-3 rounded-lg overflow-hidden text-ellipsis h-16 whitespace-nowrap">Debug
                             using Chrome <br> DevTools, check for overlapping elements, and ensure onClick works
                             properly
@@ -77,12 +85,12 @@
                                 <p>Deadline</p>
                                 <h3 class="font-bold">21 March 2025</h3>
                             </div>
-                            <button class="btn bg-blue-600 text-white">Completed</button>
+                            <button id="task-btn-1" class="btn bg-blue-600 text-white">Completed</button>
                         </div>
                     </div>
                     <div class="bg-blue-100 p-3 space-y-3 rounded-lg">
-                        <button class="btn bg-white rounded-lg">ShopEase</button>
-                        <h2 class="text-xl font-bold">Fix Mobile Button Issue </h2>
+                        <button class="btn bg-white rounded-lg">CloudSync</button>
+                        <h2 id="task-title-2" class="text-xl font-bold">Add Dark Mode </h2>
                         <p class="bg-white p-3 rounded-lg overflow-hidden text-ellipsis h-16 whitespace-nowrap">Store
                             the user's <br> preference in localStorage, update CSS variables dynamically, and apply a
                             smooth transition effect.</p>
@@ -91,12 +99,12 @@
                                 <p>Deadline</p>
                                 <h3 class="font-bold">21 March 2025</h3>
                             </div>
-                            <button class="btn bg-blue-600 text-white">Completed</button>
+                            <button id="task-btn-2" class="btn bg-blue-600 text-white">Completed</button>
                         </div>
                     </div>
                     <div class="bg-blue-100 p-3 space-y-3 rounded-lg">
-                        <button class="btn bg-white rounded-lg">ShopEase</button>
-                        <h2 class="text-xl font-bold">Fix Mobile Button Issue </h2>
+                        <button class="btn bg-white rounded-lg">SwiftPay</button>
+                        <h2 id="task-title-3" class="text-xl font-bold">Optimize Home page </h2>
                         <p class="bg-white p-3 rounded-lg overflow-hidden text-ellipsis h-16 whitespace-nowrap">Debug
                             using Chrome <br> DevTools, check for overlapping elements, and ensure onClick works
                             properly
@@ -106,12 +114,12 @@
                                 <p>Deadline</p>
                                 <h3 class="font-bold">21 March 2025</h3>
                             </div>
-                            <button class="btn bg-blue-600 text-white">Completed</button>
+                            <button id="task-btn-3" class="btn bg-blue-600 text-white">Completed</button>
                         </div>
                     </div>
                     <div class="bg-blue-100 p-3 space-y-3 rounded-lg">
-                        <button class="btn bg-white rounded-lg">ShopEase</button>
-                        <h2 class="text-xl font-bold">Fix Mobile Button Issue </h2>
+                        <button class="btn bg-white rounded-lg">Meta</button>
+                        <h2 id="task-title-4" class="text-xl font-bold">Add new emoji 🤲 </h2>
                         <p class="bg-white p-3 rounded-lg overflow-hidden text-ellipsis h-16 whitespace-nowrap">Debug
                             using Chrome <br> DevTools, check for overlapping elements, and ensure onClick works
                             properly
@@ -121,12 +129,12 @@
                                 <p>Deadline</p>
                                 <h3 class="font-bold">21 March 2025</h3>
                             </div>
-                            <button class="btn bg-blue-600 text-white">Completed</button>
+                            <button id="task-btn-4" class="btn bg-blue-600 text-white">Completed</button>
                         </div>
                     </div>
                     <div class="bg-blue-100 p-3 space-y-3 rounded-lg">
-                        <button class="btn bg-white rounded-lg">ShopEase</button>
-                        <h2 class="text-xl font-bold">Fix Mobile Button Issue </h2>
+                        <button class="btn bg-white rounded-lg">Google LLC</button>
+                        <h2 id="task-title-5" class="text-xl font-bold">Integrate OpenAI API </h2>
                         <p class="bg-white p-3 rounded-lg overflow-hidden text-ellipsis h-16 whitespace-nowrap">Debug
                             using Chrome <br> DevTools, check for overlapping elements, and ensure onClick works
                             properly
@@ -136,12 +144,12 @@
                                 <p>Deadline</p>
                                 <h3 class="font-bold">21 March 2025</h3>
                             </div>
-                            <button class="btn bg-blue-600 text-white">Completed</button>
+                            <button id="task-btn-5" class="btn bg-blue-600 text-white">Completed</button>
                         </div>
                     </div>
                     <div class="bg-blue-100 p-3 space-y-3 rounded-lg">
-                        <button class="btn bg-white rounded-lg">ShopEase</button>
-                        <h2 class="text-xl font-bold">Fix Mobile Button Issue </h2>
+                        <button class="btn bg-white rounded-lg">Glassdoar</button>
+                        <h2 id="task-title-6" class="text-xl font-bold">Improve Job searching </h2>
                         <p class="bg-white p-3 rounded-lg overflow-hidden text-ellipsis h-16 whitespace-nowrap">Debug
                             using Chrome DevTools, <br> check for overlapping elements, and ensure onClick works
                             properly
@@ -151,7 +159,7 @@
                                 <p>Deadline</p>
                                 <h3 class="font-bold">21 March 2025</h3>
                             </div>
-                            <button class="btn bg-blue-600 text-white">Completed</button>
+                            <button id="task-btn-6" class="btn bg-blue-600 text-white ">Completed</button>
                         </div>
                     </div>
                 </section>
@@ -160,13 +168,17 @@
                 <div class="flex justify-center gap-x-3 mt-3">
                     <img src="assets/activity.png" alt="">
                     <h2 class="text-2xl font-bold">Activity Log</h2>
-                    
+
                 </div>
-                <button class="btn bg-blue-600 text-white rounded-lg">Clear History</button>
+                <button id="clear-history-btn" class="btn bg-blue-600 text-white rounded-lg">Clear History</button>
                 <hr>
+                <div id="history-container" class="">
+
+                </div>
             </div>
         </section>
     </main>
+    
     <script src="js/script.js"></script>
 </body>
 
