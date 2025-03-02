@@ -10,7 +10,7 @@
 </head>
 
 <body class="bg-blue-100">
-    <header>
+    <header class="pt-3">
         <nav class="w-11/12 mx-auto">
             <div class="navbar bg-base-100 shadow-sm rounded-xl px-3">
                 <div class="flex-1 flex items-center gap-x-3">
@@ -27,11 +27,42 @@
     </header>
     <main class="w-11/12 mx-auto space-y-3 py-4">
         <h2 class="text-xl font-bold text-center">blogs</h2>
-        <div class="bg-white p-3 rounded-md">Question-1: What are the different ways to select an element in the DOM?</div>
-        <div class="bg-white p-3 rounded-md">Question-2: What is the difference between innerHTML, innerText, and textContent ?</div>
-        <div class="bg-white p-3 rounded-md">Question-3: What is event delegation in the DOM?</div>
-        <div class="bg-white p-3 rounded-md">Question-4: What is event bubbling in the DOM?</div>
-        <div class="bg-white p-3 rounded-md">Question-5: How do you create, add, and remove elements using JavaScript?</div>
+        <div class="bg-white p-3 rounded-md">
+            <h2 class="p-3 text-xl font-bold"> Question-1: What are the different ways to select an element in the DOM?</h2>
+            <hr>
+            <p class="p-3"> Ans: there are several ways to select an element in the DOM. Such as: Using getElementById,getElementsByClassName,getElementsByTagName,querySelector and querySelectorAll.</p>
+        </div>
+        <div class="bg-white p-3 rounded-md">
+            <h2 class="font-bold text-xl p-3">Question-2: What is the difference between innerHTML, innerText, and
+            textContent ?</h2>
+            <hr>
+            <div class="p-3 space-y-3">
+                <p>ans:innerHTML, innerText, and textContent are properties of the DOM.But there is a difference among them.</p>
+                <ul>
+                    <li>innerHTML: Gets or sets HTML content (tags included).</li>
+                    <li>innerText: Gets or sets visible text content, accounting for CSS.</li>
+                    <li>textContent: Gets or sets raw text content, without HTML tags or CSS effects.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bg-white p-3 rounded-md">
+            <h2 class="text-xl font-bold p-3">Question-3: What is event delegation in the DOM?</h2>
+            <hr>
+            <p class="p-3">
+                Event delegation is a technique in JavaScript where we delegate the responsibility of handling an event to a parent element. By doing so, we avoid attaching multiple event listeners to individual elements, especially when dealing with a large number of similar elements, such as a list or a table.</p>
+        </div>
+        <div class="bg-white p-3 rounded-md">
+            <h2 class="text-xl font-bold p-3">Question-4: What is event bubbling in the DOM?</h2>
+            <hr>
+            <p class="p-3">Event Bubbling is a concept in the DOM. It happens when an element receives an event, and that event bubbles up to its parent and ancestor elements in the DOM tree until it gets to the root element</p>
+        </div>
+        <div class="bg-white p-3 rounded-md">
+            <h2 class="text-xl font-bold p-3">Question-5: How do you create, add, and remove elements using JavaScript?</h2>
+            <hr>
+            <p class="p-3">JavaScript provides several methods for dynamically manipulating the Document Object Model (DOM) by creating, adding, and removing elements. Here's a breakdown of the core techniques:1. Creating Elements:document.createElement(tagName):This is the fundamental method. It creates a new HTML element specified by the tagName .
+                2. Adding Elements:parentNode.appendChild(childNode):Appends a childNode as the last child of parentNode.Example: document.body.appendChild(newDiv);  parentNode.insertBefore(newNode, referenceNode):Inserts a newNode before a referenceNode within a parentNode.parentNode.append(...nodes): This is a more modern method that allows you to append several nodes or strings at the end the parent node.parentNode.prepend(...nodes):This method allows you to insert nodes or strings at the begining of the parent node.
+                3. Removing Elements:parentNode.removeChild(childNode):Removes a childNode from its parentNode.childNode.remove(): Removes the childNode from the DOM directly. </p>
+        </div>
     </main>
 
     <script src="js/script.js"></script>
